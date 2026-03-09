@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Secure Account Sign In</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./docs/Style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body class="page-backdrop min-h-screen bg-[var(--surface-bg)] text-[var(--ink)]">
-    <div id="loginToast" aria-live="polite" class="pointer-events-none fixed right-4 top-4 z-50 translate-y-2 opacity-0 transition-all duration-300 sm:right-6 sm:top-6">
-        <div class="flex items-center gap-3 rounded-[20px] bg-[var(--ink)] px-4 py-3 text-white shadow-2xl ring-1 ring-white/10">
+    <div id="loginToast" aria-live="polite"
+        class="pointer-events-none fixed right-4 top-4 z-50 translate-y-2 opacity-0 transition-all duration-300 sm:right-6 sm:top-6">
+        <div
+            class="flex items-center gap-3 rounded-[20px] bg-[var(--ink)] px-4 py-3 text-white shadow-2xl ring-1 ring-white/10">
             <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-[var(--brand)] text-white">
                 <i class="fa-solid fa-circle-check"></i>
             </div>
@@ -21,113 +26,87 @@
         </div>
     </div>
 
-    <main class="mx-auto flex min-h-screen max-w-7xl items-center md:py-6 sm:px-6 lg:px-8">
-        <section class="glass-shell grid w-full overflow-hidden md:rounded-[32px] lg:grid-cols-[0.92fr_1.08fr]">
-            <div class="hero-panel relative overflow-hidden px-6 py-7 text-white sm:px-8 sm:py-8 lg:px-10 lg:py-10">
-                <div class="absolute -right-20 -top-20 h-52 w-52 rounded-full bg-white/10 blur-sm"></div>
-                <div class="absolute -bottom-16 -left-16 h-40 w-40 rounded-full bg-white/10 blur-sm"></div>
-                <div class="relative flex h-full flex-col justify-between gap-8">
-                    <div class="flex items-center justify-between gap-4">
-                        <div class="rounded-2xl border border-white/30 bg-white/15 px-4 py-3 text-sm font-bold tracking-[0.04em] text-white/95">
-                            Account
-                        </div>
-                        <div class="display-font text-2xl font-bold italic tracking-[-0.04em] sm:text-3xl">
-                            Access Hub
-                        </div>
-                    </div>
-
-                    <div class="space-y-6">
-                        <div class="inline-flex items-center rounded-full border border-white/25 bg-white/15 px-4 py-2 text-xs font-bold uppercase tracking-[0.24em] text-white/90">
-                            Secure access
-                        </div>
-                        <div class="space-y-4">
-                            <p class="text-sm font-bold uppercase tracking-[0.22em] text-white/80">Online Account Management</p>
-                            <h1 class="display-font max-w-md text-3xl font-semibold leading-[1.2]  sm:text-4xl">
-                                Sign in to access your dashboard and documents.
-                            </h1>
-                            <p class="max-w-md text-sm leading-7 text-white/85 sm:text-base">
-                                Manage your account, review recent activity, and reach support from one secure place.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="grid gap-3 sm:grid-cols-2">
-                        <div class="rounded-[22px] border border-white/20 bg-black/10 p-4 backdrop-blur-sm">
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-[0.22em] text-white/70">Security</p>
-                            <p class="text-base font-bold sm:text-lg">Encrypted sign-in protection</p>
-                        </div>
-                        <div class="rounded-[22px] border border-white/20 bg-black/10 p-4 backdrop-blur-sm">
-                            <p class="mb-2 text-[11px] font-bold uppercase tracking-[0.22em] text-white/70">Support</p>
-                            <p class="text-base font-bold sm:text-lg">Fast help when you need it</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+    <main class="mx-auto flex min-h-screen max-w-7xl items-center justify-center px-4 py-8 sm:px-6 lg:px-8">
+        <section class="glass-shell w-full max-w-xl overflow-hidden rounded-[32px]">
             <div class="content-panel px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12">
-                <div class="mx-auto max-w-2xl">
-                    <div class="mb-8">
+                <div class="mx-auto w-full max-w-md">
+                    <div class="mb-8 text-center">
+                        <div class="mb-6 flex justify-center">
+                            <img src="/docs/images/logo.svg" alt="Logo" class="h-12 w-auto" />
+                        </div>
+
                         <p class="text-xs font-bold uppercase tracking-[0.24em] text-[var(--brand)]">Welcome back</p>
-                        <h2 class="display-font mt-3 text-3xl font-semibold leading-none tracking-[-0.02em] text-[var(--navy)] sm:text-3xl">
+                        <h2
+                            class="display-font mt-3 text-3xl font-semibold leading-none tracking-[-0.02em] text-[var(--navy)] sm:text-4xl">
                             Sign in to your account
                         </h2>
-                        <p class="mt-4 max-w-2xl text-sm leading-7 text-[var(--muted)] sm:text-[0.98rem]">
+                        <p class="mt-4 text-sm leading-7 text-[var(--muted)] sm:text-[0.98rem]">
                             Use your registered email address and password to continue to your secure dashboard.
+                        </p>
+                    </div>
+
+                    <div
+                        class="mb-6 flex items-center justify-center gap-3 rounded-[22px] border border-stone-200 bg-white/80 px-4 py-4 text-center">
+                        <div class="flex items-center gap-1 text-[#00b67a]">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-sm font-semibold text-[var(--muted)]">
+                            Rated Excellent on <span class="font-bold text-[#00b67a]">Trustpilot</span>
                         </p>
                     </div>
 
                     <form id="loginForm" class="space-y-5">
                         <div class="space-y-2">
-                            <label for="email" class="block text-sm font-bold tracking-[0.02em] text-[var(--navy)]">Email address</label>
+                            <label for="email"
+                                class="block text-sm font-bold tracking-[0.02em] text-[var(--navy)]">Email
+                                address</label>
                             <div class="relative">
-                                <span class="pointer-events-none absolute left-5 top-1/2 z-10 -translate-y-1/2 text-[var(--brand)]">
+                                <span
+                                    class="pointer-events-none absolute left-5 top-1/2 z-10 -translate-y-1/2 text-[var(--brand)]">
                                     <i class="fa-regular fa-envelope"></i>
                                 </span>
-                                <input id="email" name="email" type="email" autocomplete="email" placeholder="Enter your email address" class="w-full rounded-[20px] border border-stone-300 bg-white py-4 pl-14 pr-5 text-base text-[var(--ink)] outline-none transition placeholder:text-stone-400 focus:-translate-y-0.5 focus:border-[var(--brand)] focus:ring-4 focus:ring-[rgba(255,98,0,0.15)]" required />
+                                <input id="email" name="email" type="email" autocomplete="email"
+                                    placeholder="Enter your email address"
+                                    class="w-full rounded-[20px] border border-stone-300 bg-white py-4 pl-14 pr-5 text-base text-[var(--ink)] outline-none transition placeholder:text-stone-400 focus:-translate-y-0.5 focus:border-[var(--brand)] focus:ring-4 focus:ring-[rgba(255,98,0,0.15)]"
+                                    required />
                             </div>
                         </div>
 
                         <div class="space-y-2">
-                            <label for="password" class="block text-sm font-bold tracking-[0.02em] text-[var(--navy)]">Password</label>
+                            <label for="password"
+                                class="block text-sm font-bold tracking-[0.02em] text-[var(--navy)]">Password</label>
                             <div class="relative">
-                                <span class="pointer-events-none absolute left-5 top-1/2 z-10 -translate-y-1/2 text-[var(--brand)]">
+                                <span
+                                    class="pointer-events-none absolute left-5 top-1/2 z-10 -translate-y-1/2 text-[var(--brand)]">
                                     <i class="fa-solid fa-lock"></i>
                                 </span>
-                                <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" class="w-full rounded-[20px] border border-stone-300 bg-white py-4 pl-14 pr-5 text-base text-[var(--ink)] outline-none transition placeholder:text-stone-400 focus:-translate-y-0.5 focus:border-[var(--brand)] focus:ring-4 focus:ring-[rgba(255,98,0,0.15)]" required />
+                                <input id="password" name="password" type="password" autocomplete="current-password"
+                                    placeholder="Enter your password"
+                                    class="w-full rounded-[20px] border border-stone-300 bg-white py-4 pl-14 pr-5 text-base text-[var(--ink)] outline-none transition placeholder:text-stone-400 focus:-translate-y-0.5 focus:border-[var(--brand)] focus:ring-4 focus:ring-[rgba(255,98,0,0.15)]"
+                                    required />
                             </div>
                         </div>
 
-                        <div class="flex flex-col gap-3 pt-1 text-sm text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between">
+                        <div
+                            class="flex flex-col gap-3 pt-1 text-sm text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between">
                             <label class="inline-flex items-center gap-3 font-medium">
                                 <input type="checkbox" class="h-4 w-4 accent-[#ff6200]" />
                                 <span>Remember this device</span>
                             </label>
-                            <a href="#" class="font-bold text-[var(--brand)] transition hover:text-[var(--brand-deep)]">Forgot password?</a>
+                            <a href="#"
+                                class="font-bold text-[var(--brand)] transition hover:text-[var(--brand-deep)]">Forgot
+                                password?</a>
                         </div>
 
-                        <button type="submit" class="brand-shadow w-full rounded-[22px] bg-gradient-to-r from-[var(--brand)] to-[var(--brand-deep)] px-6 py-4 text-base font-bold text-white transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(255,98,0,0.28)]">
+                        <button type="submit"
+                            class="brand-shadow w-full rounded-[22px] bg-gradient-to-r from-[var(--brand)] to-[var(--brand-deep)] px-6 py-4 text-base font-bold text-white transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(255,98,0,0.28)]">
                             Sign In Securely
                         </button>
                     </form>
-
-                    <div class="mt-6 rounded-[24px] border border-stone-200 bg-white/80 p-5">
-                        <div class="flex items-start gap-4">
-                            <div class="mt-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-2xl bg-[var(--brand-soft)] text-[var(--brand)]">
-                                <i class="fa-solid fa-shield-halved"></i>
-                            </div>
-                            <p class="text-sm font-semibold leading-7 text-[var(--muted)]">
-                                Your information is protected with secure authentication and monitored account access.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="mt-5 flex flex-wrap items-center justify-between gap-4 text-sm">
-                        <p class="text-[var(--muted)]">Need to review your active cover and documents?</p>
-                        <a href="./policy-details.html" class="inline-flex items-center gap-2 rounded-full border border-[var(--brand-soft)] px-4 py-2 font-bold text-[var(--brand)] transition hover:bg-[var(--brand-soft)]/60">
-                            Open policy details
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
         </section>
@@ -135,4 +114,5 @@
 
     <script src="./docs/javascript/login-form.js" defer></script>
 </body>
+
 </html>
