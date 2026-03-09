@@ -1,38 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap");
+
+:root {
+    --brand: #ff6200;
+    --brand-deep: #e25500;
+    --brand-soft: #ffe3d1;
+    --surface-bg: #efede8;
+    --ink: #1f1f24;
+    --muted: #676c78;
+    --navy: #243667;
+    --line: #ded8cf;
+    --teal: #1c8fb7;
+    --hero-gradient: linear-gradient(135deg, #ff7d22 0%, var(--brand) 52%, var(--brand-deep) 100%);
+    --panel-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(255, 246, 239, 0.96));
+    --teal-gradient: linear-gradient(135deg, #2aa3ca 0%, var(--teal) 100%);
+    --font-display: "Sora", sans-serif;
+    --font-body: "Manrope", sans-serif;
+    --shadow-glow: 0 24px 60px rgba(31, 31, 36, 0.15);
+    --shadow-orange: 0 18px 36px rgba(255, 98, 0, 0.22);
+    --shadow-soft: 0 18px 34px rgba(31, 31, 36, 0.08);
+}
 
 * {
-  box-sizing: border-box;
-  outline: none;
-  scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    outline: none;
+    scroll-behavior: smooth;
 }
 
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    background-color: var(--surface-bg);
+    color: var(--ink);
+}
+
+a,
 img,
 button,
-iframe,
-
-a {
-  user-select: none;
+iframe {
+    user-select: none;
 }
 
-.fadeIn {
-  animation: fadeIn 0.5s;
+.page-backdrop {
+    background-image: radial-gradient(circle at top left, rgba(255, 98, 0, 0.16), transparent 28%), radial-gradient(circle at bottom right, rgba(36, 54, 103, 0.08), transparent 26%);
 }
 
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+.glass-shell {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.72);
+    box-shadow: var(--shadow-glow);
+    backdrop-filter: blur(22px);
 }
 
-.myShadow {
-  box-shadow: rgba(100, 100, 111, 0.082) 0px 7px 29px 0px;
+.hero-panel {
+    background: var(--hero-gradient);
+}
+
+.content-panel {
+    background: var(--panel-gradient);
+}
+
+.teal-panel {
+    background: var(--teal-gradient);
+}
+
+.display-font {
+    font-family: var(--font-display);
+}
+
+.brand-shadow {
+    box-shadow: var(--shadow-orange);
+}
+
+.soft-shadow {
+    box-shadow: var(--shadow-soft);
 }
 
 input:user-invalid {
-  border: 1.5px solid rgba(255, 0, 0, 0.416);
+    border: 1.5px solid rgba(255, 0, 0, 0.32);
 }
