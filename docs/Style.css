@@ -50,19 +50,33 @@ iframe {
 }
 
 .glass-shell {
-    background: rgba(255, 255, 255, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.72);
-    box-shadow: var(--shadow-glow);
-    backdrop-filter: blur(22px);
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+}
+
+.content-panel {
+    background: transparent;
+}
+
+@media (min-width: 700px) {
+    .glass-shell {
+        background: rgba(255, 255, 255, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.72);
+        box-shadow: var(--shadow-glow);
+        backdrop-filter: blur(22px);
+    }
+
+    .content-panel {
+        background: var(--panel-gradient);
+    }
 }
 
 .hero-panel {
     background: var(--hero-gradient);
 }
 
-.content-panel {
-    background: var(--panel-gradient);
-}
 
 .teal-panel {
     background: var(--teal-gradient);
