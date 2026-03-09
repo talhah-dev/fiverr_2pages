@@ -11,7 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="page-backdrop min-h-screen bg-[var(--surface-bg)] text-[var(--ink)]">
+<body class="min-h-screen overflow-hidden bg-[var(--surface-bg)] text-[var(--ink)] md:page-backdrop">
     <div id="loginToast" aria-live="polite"
         class="pointer-events-none fixed right-4 top-4 z-50 translate-y-2 opacity-0 transition-all duration-300 sm:right-6 sm:top-6">
         <div
@@ -26,9 +26,9 @@
         </div>
     </div>
 
-    <main class="mx-auto flex min-h-screen max-w-7xl items-center justify-center md:py-8 sm:px-6 lg:px-8">
-        <section class="glass-shell w-full max-w-xl overflow-hidden md:rounded-[32px]">
-            <div class="content-panel px-6 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12">
+    <main class="mx-auto flex h-screen max-w-7xl items-center justify-center px-4 py-4 sm:px-6 lg:px-8">
+        <section class=" w-full md:bg-white/80 max-w-xl overflow-hidden md:rounded-[32px]">
+            <div class=" px-1 py-8 sm:px-8 sm:py-10 lg:px-12 lg:py-12">
                 <div class="mx-auto w-full max-w-md">
                     <div class="mb-8 text-center">
                         <div class="mb-6 flex justify-center">
@@ -40,13 +40,13 @@
                             class="display-font mt-3 text-3xl font-semibold leading-none tracking-[-0.02em] text-[var(--navy)] sm:text-4xl">
                             Sign in to your account
                         </h2>
-                        <p class="mt-4 text-sm leading-7 text-[var(--muted)] sm:text-[0.98rem]">
+                        <p class="mt-4 text-sm text-[var(--muted)] sm:text-[0.98rem]">
                             Use your registered email address and password to continue to your secure dashboard.
                         </p>
                     </div>
 
                     <div
-                        class="mb-6 flex items-center justify-center gap-3 rounded-[22px] border border-stone-200 bg-white/80 px-4 py-4 text-center">
+                        class="mb-6 flex items-center justify-center gap-3 rounded-xl border border-stone-200 bg-white/80 px-4 py-4 text-center">
                         <div class="flex items-center gap-1 text-[#00b67a]">
                             <i class="fa-solid fa-star"></i>
                             <i class="fa-solid fa-star"></i>
@@ -59,11 +59,10 @@
                         </p>
                     </div>
 
-
                     <form id="loginForm" class="space-y-5">
                         <div class="space-y-2">
                             <label for="email"
-                                class="block text-sm font-bold tracking-[0.02em] text-[var(--navy)]">Email
+                                class="block text-sm tracking-[0.02em] text-[var(--navy)]">Email
                                 address</label>
                             <div class="relative">
                                 <span
@@ -72,14 +71,14 @@
                                 </span>
                                 <input id="email" name="email" type="email" autocomplete="email"
                                     placeholder="Enter your email address"
-                                    class="w-full rounded-[20px] border border-stone-300 bg-white py-4 pl-14 pr-5 text-base text-[var(--ink)] outline-none transition placeholder:text-stone-400 focus:-translate-y-0.5 focus:border-[var(--brand)] focus:ring-4 focus:ring-[rgba(255,98,0,0.15)]"
+                                    class="w-full rounded-xl border border-stone-300 bg-white py-3 pl-14 pr-5 text-base text-[var(--ink)] outline-none transition placeholder:text-stone-400 focus:-translate-y-0.5 focus:border-[var(--brand)] focus:ring-4 focus:ring-[rgba(255,98,0,0.15)]"
                                     required />
                             </div>
                         </div>
 
                         <div class="space-y-2">
                             <label for="password"
-                                class="block text-sm font-bold tracking-[0.02em] text-[var(--navy)]">Password</label>
+                                class="block text-sm tracking-[0.02em] text-[var(--navy)]">Password</label>
                             <div class="relative">
                                 <span
                                     class="pointer-events-none absolute left-5 top-1/2 z-10 -translate-y-1/2 text-[var(--brand)]">
@@ -87,7 +86,7 @@
                                 </span>
                                 <input id="password" name="password" type="password" autocomplete="current-password"
                                     placeholder="Enter your password"
-                                    class="w-full rounded-[20px] border border-stone-300 bg-white py-4 pl-14 pr-5 text-base text-[var(--ink)] outline-none transition placeholder:text-stone-400 focus:-translate-y-0.5 focus:border-[var(--brand)] focus:ring-4 focus:ring-[rgba(255,98,0,0.15)]"
+                                    class="w-full rounded-xl border border-stone-300 bg-white py-3 pl-14 pr-5 text-base text-[var(--ink)] outline-none transition placeholder:text-stone-400 focus:-translate-y-0.5 focus:border-[var(--brand)] focus:ring-4 focus:ring-[rgba(255,98,0,0.15)]"
                                     required />
                             </div>
                         </div>
@@ -104,11 +103,10 @@
                         </div>
 
                         <button type="submit"
-                            class="brand-shadow w-full rounded-[22px] bg-gradient-to-r from-[var(--brand)] to-[var(--brand-deep)] px-6 py-4 text-base font-bold text-white transition hover:-translate-y-0.5 hover:shadow-[0_20px_40px_rgba(255,98,0,0.28)]">
+                            class="brand-shadow w-full rounded-xl bg-gradient-to-r from-[var(--brand)] to-[var(--brand-deep)] px-6 py-3 tracking-wide cursor-pointer text-white transition hover:opacity-90 ">
                             Sign In Securely
                         </button>
                     </form>
-
                 </div>
             </div>
         </section>

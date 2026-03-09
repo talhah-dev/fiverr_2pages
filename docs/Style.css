@@ -24,11 +24,6 @@
     scroll-behavior: smooth;
 }
 
-html,
-body {
-    min-height: 100%;
-}
-
 body {
     margin: 0;
     font-family: var(--font-body);
@@ -82,14 +77,6 @@ iframe {
 
 .display-font {
     font-family: var(--font-display);
-}
-
-.brand-shadow {
-    box-shadow: var(--shadow-orange);
-}
-
-.soft-shadow {
-    box-shadow: var(--shadow-soft);
 }
 
 input:user-invalid {
